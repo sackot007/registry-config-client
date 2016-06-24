@@ -1,0 +1,17 @@
+#{application}: spring.cloud.config.name or spring.application.name.
+#{profile}: spring.cloud.config.env or spring.profiles.active.
+#{label}: spring.cloud.config.label if it is defined; otherwise, the Config Server’s default label.
+
+
+spring:
+  profiles:
+    active: kprod
+#  application:
+#    name: dbconfig
+
+  cloud:
+    config:
+      name: dbconfig
+      env: kprod
+      label: master
+      uri: http://localhost:${config.port:8888}

@@ -1,0 +1,10 @@
+#---
+#instances: 1
+#memory: 512M
+#applications:
+#  - name: registry-config-client
+#    host: cookie
+#    services:
+#      - registry-config-server
+#    env:
+#      SPRING_PROFILES_ACTIVE: kprod
